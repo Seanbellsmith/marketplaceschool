@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sell Page</title>
+  <link rel="stylesheet" type="text/css" href="sell.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sell.html">Sell</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="sell-container">
+    <h2>Sell an Item</h2>
+    <form id="sell-form">
+      <label for="item">Item:</label>
+      <select id="item">
+        <option value="item1">Item 1</option>
+        <option value="item2">Item 2</option>
+        <option value="item3">Item 3</option>
+      </select>
+
+      <label for="price">Price:</label>
+      <input type="number" id="price" step="0.01" placeholder="Enter the price">
+
+      <button type="submit">Sell</button>
+    </form>
+  </div>
+
+  <script src="sell.js"></script>
+</body>
+</html>

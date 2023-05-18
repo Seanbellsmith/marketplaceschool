@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Marketplace</title>
+  <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to the Marketplace</h1>
+	<nav>
+    <ul>
+      
+      <li><a href="sell.html">Sell</a></li>
+    </ul>
+  </nav>
+  </header>
+  
+  <div id="products">
+    <h2>Available Products</h2>
+    <div id="product-list" class="product-list"></div>
+  </div>
+  
+  <div id="basket">
+    <h2>Basket</h2>
+    <ul id="basket-items"></ul>
+    <div id="total">Total: $0.00</div>
+    <button id="basket-button">Go to Basket</button>
+  </div>
+  
+  <script src="script.js"></script>
+  <script>
+    // Add event listener to the basket button
+    const basketButton = document.getElementById('basket-button');
+    basketButton.addEventListener('click', () => {
+      const basketItems = JSON.stringify(basket); // Convert basket items to JSON string
+      const url = `basket.html?items=${encodeURIComponent(basketItems)}`; // Append basket items as URL parameter
+      window.location.href = url; // Navigate to the basket page
+    });
+  </script>
+</body>
+</html>
